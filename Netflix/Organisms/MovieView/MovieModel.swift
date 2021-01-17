@@ -15,10 +15,10 @@ struct MovieModel: Identifiable {
     var categories: [String]?
     
     //Detail View
-    var details: MovieDeailModel?
+    var details: MovieDetailModel?
 }
 
-struct MovieDeailModel: Identifiable {
+struct MovieDetailModel: Identifiable {
     var id: String?
     var year: Int?
     var rating: String?
@@ -27,6 +27,7 @@ struct MovieDeailModel: Identifiable {
     var promotionHeadline: String?
     var isLiked: Bool?
     var episodeInfo: EpisodeInfo?
+    var moreLikeThis: [MovieModel]
 }
 
 struct EpisodeInfo {

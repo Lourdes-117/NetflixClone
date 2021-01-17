@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieInfoSubHeadline: View {
     @ObservedObject var viewModel = MovieInfoSubHeadlineViewModel()
-    init(details: MovieDeailModel) {
+    init(details: MovieDetailModel) {
         viewModel = MovieInfoSubHeadlineViewModel(details: details)
     }
     var body: some View {

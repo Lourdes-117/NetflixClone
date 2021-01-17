@@ -9,12 +9,12 @@ import Foundation
 
 class MovieInfoSubHeadlineViewModel: ObservableObject {
     init() { }
-    init(details: MovieDeailModel?) {
+    init(details: MovieDetailModel?) {
         model = details
         isLiked = model?.isLiked
     }
     
-    private var model: MovieDeailModel?
+    private var model: MovieDetailModel?
     
     var year: String {
         guard let year = model?.year else {

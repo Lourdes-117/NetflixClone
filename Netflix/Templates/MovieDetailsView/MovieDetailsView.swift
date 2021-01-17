@@ -103,8 +103,12 @@ struct MovieDetailsView: View {
                             }
                             Spacer()
                         }
-                        .padding(.leading, 20)
+                        .padding([.leading, .bottom], 20)
                         .padding(.top, 10)
+                        
+                        //Tab Switcher
+                        CustomTabSwitcherView(tabs: [.episodes, .trailers, .more], movie: viewModel.movie)
+                        .padding(.leading, 8)
                     }
                 }
             }

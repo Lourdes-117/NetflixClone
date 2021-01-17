@@ -19,10 +19,15 @@
 		AE35D21A2586385300A9CDD9 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE35D2192586385300A9CDD9 /* StandardHomeMovie.swift */; };
 		AE35D229258638E400A9CDD9 /* TestValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE35D228258638E400A9CDD9 /* TestValues.swift */; };
 		AE35D22F25867AB100A9CDD9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE35D22E25867AB100A9CDD9 /* HomeViewModel.swift */; };
-		AE61BCBF258923D800048695 /* UIScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCBE258923D800048695 /* UIScreenExtention.swift */; };
-		AE61BCC425892B8F00048695 /* GradientExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCC325892B8F00048695 /* GradientExtention.swift */; };
+		AE52A0EF2594593600F060BF /* CustomTabSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52A0EE2594593600F060BF /* CustomTabSwitcherView.swift */; };
+		AE52A0F42594594500F060BF /* CustomTabSwitcherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52A0F32594594500F060BF /* CustomTabSwitcherViewModel.swift */; };
+		AE52A0FF2594643700F060BF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE52A0FE2594643700F060BF /* StringExtensions.swift */; };
+		AE61BCBF258923D800048695 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCBE258923D800048695 /* UIScreenExtension.swift */; };
+		AE61BCC425892B8F00048695 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCC325892B8F00048695 /* GradientExtension.swift */; };
 		AE61BCDF2589398300048695 /* HomeScreenTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCDE2589398300048695 /* HomeScreenTopBarView.swift */; };
 		AE61BCE4258939AA00048695 /* HomeScreenTopBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BCE3258939AA00048695 /* HomeScreenTopBarViewModel.swift */; };
+		AE6C062025B065BE00862C52 /* MoreLikeThisGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6C061F25B065BE00862C52 /* MoreLikeThisGrid.swift */; };
+		AEDE94DE25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE94DD25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift */; };
 		AEDF0D572587DBCE006883DF /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF0D562587DBCE006883DF /* TopMoviePreview.swift */; };
 		AEDF0D732587E6F1006883DF /* TopMoviePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF0D722587E6F1006883DF /* TopMoviePreviewViewModel.swift */; };
 		AEDF0D7F2587F4A1006883DF /* TopMoviePreviewBottomButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF0D7E2587F4A1006883DF /* TopMoviePreviewBottomButtonList.swift */; };
@@ -75,10 +80,15 @@
 		AE35D2192586385300A9CDD9 /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
 		AE35D228258638E400A9CDD9 /* TestValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestValues.swift; sourceTree = "<group>"; };
 		AE35D22E25867AB100A9CDD9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		AE61BCBE258923D800048695 /* UIScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtention.swift; sourceTree = "<group>"; };
-		AE61BCC325892B8F00048695 /* GradientExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtention.swift; sourceTree = "<group>"; };
+		AE52A0EE2594593600F060BF /* CustomTabSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcherView.swift; sourceTree = "<group>"; };
+		AE52A0F32594594500F060BF /* CustomTabSwitcherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcherViewModel.swift; sourceTree = "<group>"; };
+		AE52A0FE2594643700F060BF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		AE61BCBE258923D800048695 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		AE61BCC325892B8F00048695 /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
 		AE61BCDE2589398300048695 /* HomeScreenTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTopBarView.swift; sourceTree = "<group>"; };
 		AE61BCE3258939AA00048695 /* HomeScreenTopBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTopBarViewModel.swift; sourceTree = "<group>"; };
+		AE6C061F25B065BE00862C52 /* MoreLikeThisGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThisGrid.swift; sourceTree = "<group>"; };
+		AEDE94DD25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThisGridViewModel.swift; sourceTree = "<group>"; };
 		AEDF0D562587DBCE006883DF /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		AEDF0D722587E6F1006883DF /* TopMoviePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreviewViewModel.swift; sourceTree = "<group>"; };
 		AEDF0D7E2587F4A1006883DF /* TopMoviePreviewBottomButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreviewBottomButtonList.swift; sourceTree = "<group>"; };
@@ -155,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				AE35D1CF258633C100A9CDD9 /* NetflixApp.swift */,
-				AE4E25A3258E7DB800684174 /* Screens */,
+				AE4E25A3258E7DB800684174 /* Templates */,
 				AEDF0D632587E116006883DF /* Organisms */,
 				AE61BCBD258923A700048695 /* Helpers */,
 				AE35D1D3258633C400A9CDD9 /* Assets.xcassets */,
@@ -211,22 +221,32 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		AE4E25A3258E7DB800684174 /* Screens */ = {
+		AE4E25A3258E7DB800684174 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
 				AE35D2212586385800A9CDD9 /* HomeScreen */,
 				AE34147D258DE8BA00AD5E84 /* MovieDetailsView */,
 			);
-			path = Screens;
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		AE52A0ED2594591D00F060BF /* CustomTabSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				AE52A0EE2594593600F060BF /* CustomTabSwitcherView.swift */,
+				AE52A0F32594594500F060BF /* CustomTabSwitcherViewModel.swift */,
+			);
+			path = CustomTabSwitcher;
 			sourceTree = "<group>";
 		};
 		AE61BCBD258923A700048695 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				AE35D228258638E400A9CDD9 /* TestValues.swift */,
-				AE61BCBE258923D800048695 /* UIScreenExtention.swift */,
-				AE61BCC325892B8F00048695 /* GradientExtention.swift */,
+				AE61BCBE258923D800048695 /* UIScreenExtension.swift */,
+				AE61BCC325892B8F00048695 /* GradientExtension.swift */,
 				AEDFF5F2258E8FAA004509EF /* GlobalHelpers.swift */,
+				AE52A0FE2594643700F060BF /* StringExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -238,6 +258,15 @@
 				AE61BCE3258939AA00048695 /* HomeScreenTopBarViewModel.swift */,
 			);
 			path = TopBar;
+			sourceTree = "<group>";
+		};
+		AE6C061E25B0659000862C52 /* MoreLikeThisGrid */ = {
+			isa = PBXGroup;
+			children = (
+				AE6C061F25B065BE00862C52 /* MoreLikeThisGrid.swift */,
+				AEDE94DD25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift */,
+			);
+			path = MoreLikeThisGrid;
 			sourceTree = "<group>";
 		};
 		AEDF0D552587DBC1006883DF /* TopMoviePreview */ = {
@@ -253,6 +282,8 @@
 		AEDF0D632587E116006883DF /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				AE6C061E25B0659000862C52 /* MoreLikeThisGrid */,
+				AE52A0ED2594591D00F060BF /* CustomTabSwitcher */,
 				AEE62A6B258E0E6200B2823E /* VideoResolutionView */,
 				AEE62A60258E094100B2823E /* RatingsView */,
 				AE35D2182586383A00A9CDD9 /* MovieView */,
@@ -460,21 +491,26 @@
 				AEDF0D572587DBCE006883DF /* TopMoviePreview.swift in Sources */,
 				AE35D1FE2586356D00A9CDD9 /* HomeView.swift in Sources */,
 				AEE62A7A258E104200B2823E /* VideoResolutionViewModel.swift in Sources */,
+				AE52A0F42594594500F060BF /* CustomTabSwitcherViewModel.swift in Sources */,
 				AEE62A62258E095000B2823E /* RatingsView.swift in Sources */,
 				AE35D229258638E400A9CDD9 /* TestValues.swift in Sources */,
 				AE34147F258DE8D600AD5E84 /* MovieDetailsView.swift in Sources */,
 				AEE62A4E258DED7800B2823E /* MovieDetailsViewModel.swift in Sources */,
 				AEDF0D732587E6F1006883DF /* TopMoviePreviewViewModel.swift in Sources */,
 				AE35D21A2586385300A9CDD9 /* StandardHomeMovie.swift in Sources */,
-				AE61BCBF258923D800048695 /* UIScreenExtention.swift in Sources */,
+				AE52A0EF2594593600F060BF /* CustomTabSwitcherView.swift in Sources */,
+				AE61BCBF258923D800048695 /* UIScreenExtension.swift in Sources */,
 				AEDF0DA925880773006883DF /* HorizontalButtonViewModel.swift in Sources */,
+				AE6C062025B065BE00862C52 /* MoreLikeThisGrid.swift in Sources */,
 				AE61BCE4258939AA00048695 /* HomeScreenTopBarViewModel.swift in Sources */,
 				AEDF0D922587F90F006883DF /* VerticalButtonViewModel.swift in Sources */,
 				AEDF0D7F2587F4A1006883DF /* TopMoviePreviewBottomButtonList.swift in Sources */,
 				AEE62A75258E0FCB00B2823E /* VideoResolutionView.swift in Sources */,
 				AEDF0D982588055D006883DF /* HorizontalButtonView.swift in Sources */,
+				AE52A0FF2594643700F060BF /* StringExtensions.swift in Sources */,
 				AEDF0D8D2587F902006883DF /* VerticalButtonView.swift in Sources */,
-				AE61BCC425892B8F00048695 /* GradientExtention.swift in Sources */,
+				AEDE94DE25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift in Sources */,
+				AE61BCC425892B8F00048695 /* GradientExtension.swift in Sources */,
 				AEE62A67258E096200B2823E /* RatingsViewModel.swift in Sources */,
 				AE35D1D0258633C100A9CDD9 /* NetflixApp.swift in Sources */,
 			);

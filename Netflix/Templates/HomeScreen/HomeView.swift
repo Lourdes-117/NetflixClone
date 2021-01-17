@@ -1,4 +1,3 @@
-//
 //  HomeView.swift
 //  Netflix
 //
@@ -29,6 +28,7 @@ struct HomeView: View {
                                     .font(.title3)
                                 Spacer()
                             }
+                            .padding(.leading, 5)
                             ScrollView(.horizontal, showsIndicators: false, content: {
                                 HStack {
                                     ForEach(viewModel.getMoviesFor(category: category)) { movies in
