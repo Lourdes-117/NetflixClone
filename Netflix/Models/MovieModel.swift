@@ -27,7 +27,8 @@ struct MovieDetailModel: Identifiable {
     var promotionHeadline: String?
     var isLiked: Bool?
     var episodeInfo: EpisodeInfo?
-    var moreLikeThis: [MovieModel]
+    var moreLikeThis: [MovieModel]?
+    var trailers: [TrailerModel]?
 }
 
 struct EpisodeInfo {

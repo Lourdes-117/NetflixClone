@@ -19,4 +19,7 @@ class CustomTabSwitcherViewModel: ObservableObject {
     var moreLikeThis: [MovieModel] {
         return movie?.details?.moreLikeThis ?? [MovieModel(id: nil, name: nil, thumbnailImage: nil, categories: nil, details: nil)]
     }
+    var trailers: [TrailerModel] {
+        return movie?.details?.trailers ?? [TrailerModel(name: nil, videoURl: nil, thumbnailImageUrl: nil)]
+    }
 }

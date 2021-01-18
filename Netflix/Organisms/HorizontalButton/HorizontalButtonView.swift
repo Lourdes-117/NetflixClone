@@ -16,7 +16,7 @@ struct HorizontalButtonView: View {
     var buttonTapAction: (() -> Void)?
     var body: some View {
         Button(action: {
-            viewModel.isOn = !viewModel.isOn
+            viewModel.isOn.toggle()
             if let action = buttonTapAction {
                 action()
             }

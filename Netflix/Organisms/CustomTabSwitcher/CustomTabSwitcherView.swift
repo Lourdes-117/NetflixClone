@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabSwitcherView: View {
-    @State private var selectedTab: CustomTabStates = .more
+    @State private var selectedTab: CustomTabStates = .episodes
     let viewModel = CustomTabSwitcherViewModel()
     
     init(tabs: [CustomTabStates], movie: MovieModel) {
@@ -49,7 +49,7 @@ struct CustomTabSwitcherView: View {
             case .episodes:
                 Text("EPISODES")
             case .trailers:
-                Text("Trailers And More")
+                TrailersListView(trailers: viewModel.trailers)
             case .more:
                 MoreLikeThisGrid(movies: viewModel.moreLikeThis)
             }
