@@ -9,16 +9,20 @@ import SwiftUI
 
 struct MovieInfoSubHeadline: View {
     @ObservedObject var viewModel = MovieInfoSubHeadlineViewModel()
-    init(details: MovieDetailModel) {
+    init(details: MovieDetailModel, isLiked: Binding<Bool>) {
+        _isLiked = isLiked
         viewModel = MovieInfoSubHeadlineViewModel(details: details)
     }
+    
+    @Binding private var isLiked: Bool
+    
     var body: some View {
         HStack(spacing: 20) {
             Button(action: {
                 //Like Button Action
-                viewModel.isLiked = !(viewModel.isLiked ?? false)
+                isLiked.toggle()
             }, label: {
-                Image(systemName: viewModel.likeIconName)
+                Image(systemName: isLiked ? "hand.thumbsup.fill" : "hand.thumbsup")
                     .font(.system(size: 22))
             })
             .padding(.trailing, 3)
@@ -42,7 +46,7 @@ struct MovieInfoSubHeadline_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            MovieInfoSubHeadline(details: exampleDetails1)
+            MovieInfoSubHeadline(details: exampleDetails1, isLiked: .constant(false))
         }
     }
 }

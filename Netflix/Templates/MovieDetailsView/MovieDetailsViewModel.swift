@@ -14,6 +14,27 @@ class MovieDetailsViewModel: ObservableObject {
         model = movie
     }
     
+    var numberOfSeasons: Int {
+        return movie.details?.episodes.last?.season ?? 0
+    }
+    
+    func getEpisodeFromSeason(_ season: Int) -> EpisodeInfo {
+        return movie.details?.episodes[season] ?? EpisodeInfo(id: "",
+                                                              episodeName: nil,
+                                                              description: nil,
+                                                              season: nil,
+                                                              episode: nil,
+                                                              creators: nil,
+                                                              cast: nil,
+                                                              videoUrl: nil,
+                                                              imageUrl: nil,
+                                                              length: nil)
+    }
+    
+    var details: MovieDetailModel {
+        return model?.details ?? MovieDetailModel()
+    }
+    
     var movie: MovieModel {
         return model ?? MovieModel()
     }

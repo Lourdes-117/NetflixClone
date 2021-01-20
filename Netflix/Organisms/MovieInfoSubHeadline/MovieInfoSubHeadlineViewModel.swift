@@ -11,7 +11,6 @@ class MovieInfoSubHeadlineViewModel: ObservableObject {
     init() { }
     init(details: MovieDetailModel?) {
         model = details
-        isLiked = model?.isLiked
     }
     
     private var model: MovieDetailModel?
@@ -35,13 +34,6 @@ class MovieInfoSubHeadlineViewModel: ObservableObject {
             return ""
         }
         return "\(seasons) \(seasons>1 ? "Seasons" : "Season")"
-    }
-    
-    var isLiked: Bool? {
-        didSet {
-            likeIconName = isLiked ?? false ? "hand.thumbsup.fill" : "hand.thumbsup"
-        }
-        
     }
     
     var resolution: VideoResolution? {

@@ -33,7 +33,7 @@ struct VideoPreviewContainer: View {
                 VideoView(videoUrl: viewModel.videoUrl)
             })
         }
-        .frame(maxWidth: UIScreen.width, maxHeight: 250)
+        .frame(maxWidth: UIScreen.width)
     }
 }
 

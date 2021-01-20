@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE04ED7F25B611AD003BEDF7 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04ED7E25B611AD003BEDF7 /* EpisodeView.swift */; };
+		AE04ED8425B611F3003BEDF7 /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04ED8325B611F3003BEDF7 /* EpisodeViewModel.swift */; };
 		AE34147F258DE8D600AD5E84 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34147E258DE8D600AD5E84 /* MovieDetailsView.swift */; };
 		AE35D1D0258633C100A9CDD9 /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE35D1CF258633C100A9CDD9 /* NetflixApp.swift */; };
 		AE35D1D4258633C400A9CDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE35D1D3258633C400A9CDD9 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE04ED7E25B611AD003BEDF7 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		AE04ED8325B611F3003BEDF7 /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 		AE34147E258DE8D600AD5E84 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		AE35D1CC258633C100A9CDD9 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE35D1CF258633C100A9CDD9 /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE04ED7D25B6118A003BEDF7 /* EpisodeView */ = {
+			isa = PBXGroup;
+			children = (
+				AE04ED7E25B611AD003BEDF7 /* EpisodeView.swift */,
+				AE04ED8325B611F3003BEDF7 /* EpisodeViewModel.swift */,
+			);
+			path = EpisodeView;
+			sourceTree = "<group>";
+		};
 		AE34147D258DE8BA00AD5E84 /* MovieDetailsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +354,7 @@
 		AEDF0D632587E116006883DF /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				AE04ED7D25B6118A003BEDF7 /* EpisodeView */,
 				AEC15EF725B4571900A2DDE2 /* TrailerView */,
 				AEC15EE025B43F3E00A2DDE2 /* VideoView */,
 				AE6C061E25B0659000862C52 /* MoreLikeThisGrid */,
@@ -559,6 +573,7 @@
 				AE35D229258638E400A9CDD9 /* TestValues.swift in Sources */,
 				AE34147F258DE8D600AD5E84 /* MovieDetailsView.swift in Sources */,
 				AEE62A4E258DED7800B2823E /* MovieDetailsViewModel.swift in Sources */,
+				AE04ED7F25B611AD003BEDF7 /* EpisodeView.swift in Sources */,
 				AEDF0D732587E6F1006883DF /* TopMoviePreviewViewModel.swift in Sources */,
 				AE35D21A2586385300A9CDD9 /* StandardHomeMovie.swift in Sources */,
 				AE52A0EF2594593600F060BF /* CustomTabSwitcherView.swift in Sources */,
@@ -580,6 +595,7 @@
 				AE61BCC425892B8F00048695 /* GradientExtension.swift in Sources */,
 				AEE62A67258E096200B2823E /* RatingsViewModel.swift in Sources */,
 				AE3FE88825B5F7BF00C33D52 /* TrailersListView.swift in Sources */,
+				AE04ED8425B611F3003BEDF7 /* EpisodeViewModel.swift in Sources */,
 				AE35D1D0258633C100A9CDD9 /* NetflixApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

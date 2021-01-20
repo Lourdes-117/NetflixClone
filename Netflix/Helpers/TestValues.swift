@@ -114,38 +114,67 @@ let exampleDetails7 = MovieDetailModel(id: UUID().uuidString,
 
 let episodeInfo1 = EpisodeInfo(episodeName: "Lorem Ipsum 1",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
-                               season: 3,
+                               season: 1,
                                episode: 1,
                                creators: ["Thomas", "Mary"],
-                               cast: ["Edward", "Bill", "Melinda"])
+                               cast: ["Edward", "Bill", "Melinda"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/200/200",
+                               length: 60)
 let episodeInfo2 = EpisodeInfo(episodeName: "Lorem Ipsum 2",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
+                               season: 1,
+                               episode: 2,
                                creators: ["Debbie", "Lisa"],
-                               cast: ["Paris", "Katherine", "Prince", "Joseph"])
+                               cast: ["Paris", "Katherine", "Prince", "Joseph"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/200/201",
+                               length: 45)
 let episodeInfo3 = EpisodeInfo(episodeName: "Lorem Ipsum 3",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
-                               season: 2,
-                               episode: 6,
+                               season: 1,
+                               episode: 3,
                                creators: ["Michael", "Jackson"],
-                               cast: ["Janet", "Jermaine", "Randy", "Brandon"])
+                               cast: ["Janet", "Jermaine", "Randy", "Brandon"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/201/200",
+                               length: 65)
 let episodeInfo4 = EpisodeInfo(episodeName: "Lorem Ipsum 4",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
+                               season: 2,
+                               episode: 1,
                                creators: ["Linda", "Emma"],
-                               cast: ["Hamilton", "Emily", "Segan"])
+                               cast: ["Hamilton", "Emily", "Segan"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/199/200",
+                               length: 53)
 let episodeInfo5 = EpisodeInfo(episodeName: "Lorem Ipsum 5",
+                               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
+                               season: 2,
+                               episode: 2,
+                               creators: ["Carl", "Seth"],
+                               cast: ["Reynold", "Neil Degrasse Tyson", "Wilson"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/200/199",
+                               length: 72)
+let episodeInfo6 = EpisodeInfo(episodeName: "Lorem Ipsum 6",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
                                season: 3,
                                episode: 1,
-                               creators: ["Carl", "Seth"],
-                               cast: ["Reynold", "Neil Degrasse Tyson", "Wilson"])
-let episodeInfo6 = EpisodeInfo(episodeName: "Lorem Ipsum 6",
-                               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
                                creators: ["Lourdes", "Angel"],
-                               cast: ["Arnold", "Mike Tyson", "James"])
+                               cast: ["Arnold", "Mike Tyson", "James"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/199/201",
+                               length: 44)
 let episodeInfo7 = EpisodeInfo(episodeName: "Lorem Ipsum 7",
                                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor vulputate lacus, in pulvinar elit elementum sed. Nulla tempor, nibh at rutrum porttitor, nulla magna faucibus leo, et fringilla nulla nisl eu dolor",
+                               season: 3,
+                               episode: 2,
                                creators: ["Freddie", "Mercury"],
-                               cast: ["Brian", "May", "John", "Deacon"])
+                               cast: ["Brian", "May", "John", "Deacon"],
+                               videoUrl: exampleVideoUrl,
+                               imageUrl: "https://picsum.photos/201/199",
+                               length: 37)
 
 //Trailers
 
@@ -175,3 +204,5 @@ var exampleMovies: [MovieModel] {
 var exampleTrailers: [TrailerModel] {
     return [exampleTrailer1, exampleTrailer2, exampleTrailer3, exampleTrailer4, exampleTrailer5].shuffled()
 }
+
+var exampleEpisodes = [episodeInfo1, episodeInfo2, episodeInfo3, episodeInfo4, episodeInfo5, episodeInfo6, episodeInfo7]

@@ -11,8 +11,12 @@ struct VerticalButtonView: View {
     @ObservedObject var viewModel = VerticalButtonViewModel()
     var buttonClickAction: (() -> Void)?
     
-    init(label: String, onStateImage: String, offStateImage: String, isOn: Bool = false, action: (()-> Void)?) {
+    @Binding private var isOn: Bool
+    
+    init(label: String, onStateImage: String, offStateImage: String, isOnBinding: Binding<Bool> = .constant(false), action: (()-> Void)?) {
+        _isOn = isOnBinding
         viewModel.setValues(labelString: label, onStateImageName: onStateImage, offStateImageName: offStateImage)
+        viewModel.isOn = isOn
         buttonClickAction = action
     }
     
@@ -20,6 +24,7 @@ struct VerticalButtonView: View {
     var body: some View {
         Button(action: {
             viewModel.isOn = !viewModel.isOn
+            isOn = viewModel.isOn
             if let action  = buttonClickAction {
                 action()
             }
@@ -42,7 +47,7 @@ struct VerticalButton_Previews: PreviewProvider {
             VerticalButtonView(label: "My List",
                                     onStateImage: "checkmark",
                                     offStateImage: "plus",
-                                    isOn: false) {
+                                    isOnBinding: .constant(true)) {
                 debugPrint("Button tapped")
             }
         }

@@ -11,9 +11,14 @@ struct CustomTabSwitcherView: View {
     @State private var selectedTab: CustomTabStates = .episodes
     let viewModel = CustomTabSwitcherViewModel()
     
-    init(tabs: [CustomTabStates], movie: MovieModel) {
+    @Binding private var seasonPickerBinder: Bool
+    @Binding private var selectedSeason: Int
+    
+    init(tabs: [CustomTabStates], movie: MovieModel, seasonPickerBinder: Binding<Bool>, selectedSeason: Binding<Int>) {
         viewModel.tabs = tabs
         viewModel.movie = movie
+        _seasonPickerBinder = seasonPickerBinder
+        _selectedSeason = selectedSeason
     }
     
     var body: some View {
@@ -47,7 +52,7 @@ struct CustomTabSwitcherView: View {
             //Selected View
             switch selectedTab {
             case .episodes:
-                Text("EPISODES")
+                EpisodeView(seasonPickerBilder: $seasonPickerBinder, episodes: viewModel.seasons, selectedSeasonNumber: $selectedSeason)
             case .trailers:
                 TrailersListView(trailers: viewModel.trailers)
             case .more:
@@ -63,7 +68,10 @@ struct CustomTabSwitcherView_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcherView(tabs: [.episodes, .trailers, .more], movie: exampleMovie1)
+            CustomTabSwitcherView(tabs: [.episodes, .trailers, .more],
+                                  movie: exampleMovie1,
+                                  seasonPickerBinder: .constant(false),
+                                  selectedSeason: .constant(1))
         }
     }
 }

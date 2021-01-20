@@ -29,13 +29,18 @@ struct MovieDetailModel: Identifiable {
     var episodeInfo: EpisodeInfo?
     var moreLikeThis: [MovieModel]?
     var trailers: [TrailerModel]?
+    var episodes = exampleEpisodes
 }
 
-struct EpisodeInfo {
+struct EpisodeInfo: Identifiable {
+    var id: String = UUID().uuidString
     var episodeName: String?
     var description: String?
     var season: Int?
     var episode: Int?
     var creators: [String]?
     var cast: [String]?
+    var videoUrl: String?
+    var imageUrl: String?
+    var length: Int?
 }

@@ -22,12 +22,10 @@ struct MoreLikeThisGrid: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns ) {
-                ForEach(0..<viewModel.moviesCount) { index in
-                    StandardHomeMovie(movie: viewModel.getMovieAtIndex(index))
-                        .frame(height: 200)
-                }
+        LazyVGrid(columns: columns ) {
+            ForEach(0..<viewModel.moviesCount) { index in
+                StandardHomeMovie(movie: viewModel.getMovieAtIndex(index))
+                    .frame(height: 200)
             }
         }
     }
