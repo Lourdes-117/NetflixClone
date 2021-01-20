@@ -240,8 +240,6 @@
 		AE35D2212586385800A9CDD9 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				AE61BCDD2589397400048695 /* TopBar */,
-				AEDF0D552587DBC1006883DF /* TopMoviePreview */,
 				AE35D1FD2586356D00A9CDD9 /* HomeView.swift */,
 				AE35D22E25867AB100A9CDD9 /* HomeViewModel.swift */,
 			);
@@ -278,13 +276,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		AE61BCDD2589397400048695 /* TopBar */ = {
+		AE61BCDD2589397400048695 /* HomeScreenTopBar */ = {
 			isa = PBXGroup;
 			children = (
 				AE61BCDE2589398300048695 /* HomeScreenTopBarView.swift */,
 				AE61BCE3258939AA00048695 /* HomeScreenTopBarViewModel.swift */,
 			);
-			path = TopBar;
+			path = HomeScreenTopBar;
 			sourceTree = "<group>";
 		};
 		AE6C061E25B0659000862C52 /* MoreLikeThisGrid */ = {
@@ -354,6 +352,8 @@
 		AEDF0D632587E116006883DF /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				AE61BCDD2589397400048695 /* HomeScreenTopBar */,
+				AEDF0D552587DBC1006883DF /* TopMoviePreview */,
 				AE04ED7D25B6118A003BEDF7 /* EpisodeView */,
 				AEC15EF725B4571900A2DDE2 /* TrailerView */,
 				AEC15EE025B43F3E00A2DDE2 /* VideoView */,
