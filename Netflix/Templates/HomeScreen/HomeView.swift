@@ -10,8 +10,12 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     
     @State private var movieDetailsToShow: MovieModel? = nil
+    
     @State private var topBarSelection: HomeTopRowTypes = .home
     @State private var selectedGenre: GenreType = .all
+    
+    @State private var shouldDisplayGenrePicker = false
+    @State private var shouldDisplayTopRowPicker = false
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -20,7 +24,10 @@ struct HomeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
                 //Home Top RowButtons
-                HomeScreenTopBarView(topBarSelectionBinding: $topBarSelection, genreBinding: $selectedGenre)
+                HomeScreenTopBarView(topBarSelectionBinding: $topBarSelection,
+                                     genreBinding: $selectedGenre,
+                                     shouldShowTopRowPickerBinding: $shouldDisplayTopRowPicker,
+                                     shouldShowGenerPickerBinding: $shouldDisplayGenrePicker)
                 
                 VStack {
                     
