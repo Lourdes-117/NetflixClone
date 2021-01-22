@@ -8,18 +8,31 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
+    
+    @State private var movieDetailsToShow: MovieModel? = nil
+    @State private var topBarSelection: HomeTopRowTypes = .home
+    @State private var selectedGenre: GenreType = .all
+    
     var body: some View {
         ZStack(alignment: .top) {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            HomeScreenTopBarView()
             ScrollView(.vertical, showsIndicators: false) {
+                
+                //Home Top RowButtons
+                HomeScreenTopBarView(topBarSelectionBinding: $topBarSelection, genreBinding: $selectedGenre)
+                
                 VStack {
+                    
                     ZStack(alignment: .top) {
+                        
+                        //Movie Preview
                         TopMoviePreview()
                             .frame(width: UIScreen.width)
                             .padding(.top, -50 )
                     }
+                    
+                    //Movie Category List
                     ForEach(viewModel.getAllCategories(), id: \.self) { (category)  in
                         VStack {
                             HStack {
@@ -31,10 +44,13 @@ struct HomeView: View {
                             .padding(.leading, 5)
                             ScrollView(.horizontal, showsIndicators: false, content: {
                                 HStack {
-                                    ForEach(viewModel.getMoviesFor(category: category)) { movies in
-                                        StandardHomeMovie(movie: movies)
+                                    ForEach(viewModel.getMoviesFor(category: category)) { movie in
+                                        StandardHomeMovie(movie: movie)
                                             .frame(width: 200, height: 300)
                                             .padding(.horizontal, 20)
+                                            .onTapGesture {
+                                                movieDetailsToShow = movie
+                                            }
                                     }
                                 }
                             })
@@ -42,6 +58,12 @@ struct HomeView: View {
                     }
                     .foregroundColor(.white)
                 }
+            }
+            
+            if let movieToShow = movieDetailsToShow {
+                MovieDetailsView(movie: movieToShow, selectedMovieBinding: $movieDetailsToShow)
+                    .animation(.easeInOut)
+                    .transition(.opacity)
             }
         }
     }

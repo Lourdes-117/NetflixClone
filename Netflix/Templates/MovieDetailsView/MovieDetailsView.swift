@@ -14,7 +14,10 @@ struct MovieDetailsView: View {
     @State private var selectedSeason: Int = 1
     @State private var isLiked: Bool = false
     
-    init(movie: MovieModel) {
+    @Binding private var selectedMovie: MovieModel?
+    
+    init(movie: MovieModel, selectedMovieBinding: Binding<MovieModel?>) {
+        _selectedMovie = selectedMovieBinding
         viewModel = MovieDetailsViewModel(movie: movie)
     }
     var body: some View {
@@ -27,6 +30,7 @@ struct MovieDetailsView: View {
                         Spacer()
                         Button(action: {
                             //Close Button Tap Action
+                            selectedMovie = nil
                         }, label: {
                             Image(systemName: "xmark.circle")
                                 .font(.system(size: 28))
@@ -162,6 +166,6 @@ struct MovieDetailsView: View {
 
 struct MovieDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailsView(movie: exampleMovie1)
+        MovieDetailsView(movie: exampleMovie1, selectedMovieBinding: .constant(nil))
     }
 }
