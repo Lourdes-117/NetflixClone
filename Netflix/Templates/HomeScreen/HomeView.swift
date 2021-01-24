@@ -36,34 +36,11 @@ struct HomeView: View {
                         //Movie Preview
                         TopMoviePreview()
                             .frame(width: UIScreen.width)
-                            .padding(.top, -50 )
+                            .padding(.top, -100)
                     }
                     
                     //Movie Category List
-                    ForEach(viewModel.getAllCategories(), id: \.self) { (category)  in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .fontWeight(.bold)
-                                    .font(.title3)
-                                Spacer()
-                            }
-                            .padding(.leading, 5)
-                            ScrollView(.horizontal, showsIndicators: false, content: {
-                                HStack {
-                                    ForEach(viewModel.getMoviesFor(category: category)) { movie in
-                                        StandardHomeMovie(movie: movie)
-                                            .frame(width: 200, height: 300)
-                                            .padding(.horizontal, 20)
-                                            .onTapGesture {
-                                                movieDetailsToShow = movie
-                                            }
-                                    }
-                                }
-                            })
-                        }
-                    }
-                    .foregroundColor(.white)
+                    HomeStackView(selectedMovieBinding: $movieDetailsToShow, movies: viewModel.movies, topRowType: topBarSelection)
                 }
             }
             

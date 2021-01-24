@@ -36,6 +36,8 @@
 		AEC15EE725B4426500A2DDE2 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC15EE625B4426500A2DDE2 /* VideoViewModel.swift */; };
 		AEC15EEE25B44E3C00A2DDE2 /* VideoPreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC15EED25B44E3C00A2DDE2 /* VideoPreviewContainer.swift */; };
 		AEC15EF325B44E6900A2DDE2 /* VideoPreviewContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC15EF225B44E6900A2DDE2 /* VideoPreviewContainerViewModel.swift */; };
+		AED3D8E625BD7D3600087529 /* HomeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED3D8E525BD7D3600087529 /* HomeStackView.swift */; };
+		AED3D8EB25BD7D8800087529 /* HomeStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED3D8EA25BD7D8800087529 /* HomeStackViewModel.swift */; };
 		AEDE94DE25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE94DD25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift */; };
 		AEDF0D572587DBCE006883DF /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF0D562587DBCE006883DF /* TopMoviePreview.swift */; };
 		AEDF0D732587E6F1006883DF /* TopMoviePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF0D722587E6F1006883DF /* TopMoviePreviewViewModel.swift */; };
@@ -106,6 +108,8 @@
 		AEC15EE625B4426500A2DDE2 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		AEC15EED25B44E3C00A2DDE2 /* VideoPreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewContainer.swift; sourceTree = "<group>"; };
 		AEC15EF225B44E6900A2DDE2 /* VideoPreviewContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewContainerViewModel.swift; sourceTree = "<group>"; };
+		AED3D8E525BD7D3600087529 /* HomeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStackView.swift; sourceTree = "<group>"; };
+		AED3D8EA25BD7D8800087529 /* HomeStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStackViewModel.swift; sourceTree = "<group>"; };
 		AEDE94DD25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThisGridViewModel.swift; sourceTree = "<group>"; };
 		AEDF0D562587DBCE006883DF /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		AEDF0D722587E6F1006883DF /* TopMoviePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreviewViewModel.swift; sourceTree = "<group>"; };
@@ -339,6 +343,15 @@
 			path = TrailerView;
 			sourceTree = "<group>";
 		};
+		AED3D8E425BD7D1D00087529 /* HomeStack */ = {
+			isa = PBXGroup;
+			children = (
+				AED3D8E525BD7D3600087529 /* HomeStackView.swift */,
+				AED3D8EA25BD7D8800087529 /* HomeStackViewModel.swift */,
+			);
+			path = HomeStack;
+			sourceTree = "<group>";
+		};
 		AEDF0D552587DBC1006883DF /* TopMoviePreview */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +365,7 @@
 		AEDF0D632587E116006883DF /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				AED3D8E425BD7D1D00087529 /* HomeStack */,
 				AE61BCDD2589397400048695 /* HomeScreenTopBar */,
 				AEDF0D552587DBC1006883DF /* TopMoviePreview */,
 				AE04ED7D25B6118A003BEDF7 /* EpisodeView */,
@@ -583,6 +597,7 @@
 				AE6C062025B065BE00862C52 /* MoreLikeThisGrid.swift in Sources */,
 				AEC15EE725B4426500A2DDE2 /* VideoViewModel.swift in Sources */,
 				AEC15EF325B44E6900A2DDE2 /* VideoPreviewContainerViewModel.swift in Sources */,
+				AED3D8E625BD7D3600087529 /* HomeStackView.swift in Sources */,
 				AE61BCE4258939AA00048695 /* HomeScreenTopBarViewModel.swift in Sources */,
 				AEDF0D922587F90F006883DF /* VerticalButtonViewModel.swift in Sources */,
 				AEDF0D7F2587F4A1006883DF /* TopMoviePreviewBottomButtonList.swift in Sources */,
@@ -592,6 +607,7 @@
 				AEC15EEE25B44E3C00A2DDE2 /* VideoPreviewContainer.swift in Sources */,
 				AEDF0D8D2587F902006883DF /* VerticalButtonView.swift in Sources */,
 				AEDE94DE25B30C7600AC0BAD /* MoreLikeThisGridViewModel.swift in Sources */,
+				AED3D8EB25BD7D8800087529 /* HomeStackViewModel.swift in Sources */,
 				AE61BCC425892B8F00048695 /* GradientExtension.swift in Sources */,
 				AEE62A67258E096200B2823E /* RatingsViewModel.swift in Sources */,
 				AE3FE88825B5F7BF00C33D52 /* TrailersListView.swift in Sources */,

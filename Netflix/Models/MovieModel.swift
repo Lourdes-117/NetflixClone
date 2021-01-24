@@ -7,12 +7,23 @@
 
 import Foundation
 
+enum ShowType {
+    case movie
+    case tvShow
+}
+
 struct MovieModel: Identifiable {
     var id: String?
     var name: String?
     var thumbnailImage: String?
     
     var categories: [String]?
+    
+    var showType: ShowType {
+        get {
+            details?.seasons == nil ? .movie : .tvShow
+        }
+    }
     
     //Detail View
     var details: MovieDetailModel?
