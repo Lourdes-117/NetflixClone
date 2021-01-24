@@ -127,7 +127,8 @@ struct MovieDetailsView: View {
                 }
                 if shouldShowSeasonPicker {
                     Group {
-                        Color.black.opacity(0.9)
+                        Color.black
+                            .opacity(0.9)
                         VStack {
                             Spacer()
                             

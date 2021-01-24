@@ -49,6 +49,44 @@ struct HomeView: View {
                     .animation(.easeInOut)
                     .transition(.opacity)
             }
+            
+            if shouldDisplayTopRowPicker {
+                Group {
+                    Color.black
+                        .opacity(0.9)
+                        .animation(.easeIn)
+                    
+                    VStack {
+                        Spacer()
+                        
+                        ForEach(HomeTopRowTypes.allCases, id: \.self) { topRowCase in
+                            Button(action: {
+                                shouldDisplayTopRowPicker = false
+                                topBarSelection = topRowCase
+                            }, label: {
+                                Text(topRowCase.rawValue)
+                                    .foregroundColor(topRowCase == topBarSelection ? .white : .gray)
+                                    .font(.system(size: topRowCase == topBarSelection ? 20 : 15))
+                                    .padding(.vertical, 5)
+                            })
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            shouldDisplayTopRowPicker.toggle()
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                        })
+                        .padding(.bottom, 30)
+                        .foregroundColor(.white)
+                        .font(.system(size: 40))
+                        .scaleEffect(x: 1.1)
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: UIScreen.width, height: UIScreen.height)
+            }
         }
     }
 }
