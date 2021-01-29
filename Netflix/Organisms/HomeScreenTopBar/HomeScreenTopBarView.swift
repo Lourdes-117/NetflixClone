@@ -83,7 +83,7 @@ struct HomeScreenTopBarView: View {
                         //On Select Genre
                         shouldshowShowGenrePicker = true
                     }, label: {
-                        Text(GenreType.all.rawValue)
+                        Text(selectedGenre.rawValue)
                             .font(.system(size: 13))
                         Image(systemName: "triangle.fill")
                             .font(.system(size: 8))

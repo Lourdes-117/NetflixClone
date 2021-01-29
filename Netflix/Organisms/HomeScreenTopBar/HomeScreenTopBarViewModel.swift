@@ -14,13 +14,13 @@ enum HomeTopRowTypes: String, CaseIterable {
     case myList = "My List"
 }
 
-enum GenreType: String {
+enum GenreType: String, CaseIterable {
+    case all = "All Genres"
     case tvShows = "TV Shows"
     case horror = "Horror"
     case thriller = "Thriller"
     case comedy = "Comedy"
     case mystery = "Mystery"
-    case all = "All Genres"
 }
 
 class HomeScreenTopBarViewModel {

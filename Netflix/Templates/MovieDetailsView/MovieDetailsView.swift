@@ -139,7 +139,7 @@ struct MovieDetailsView: View {
                                 }, label: {
                                     Text("Season \(seasonNumber)")
                                 })
-                                .padding(.vertical, 5)
+                                .padding(.vertical, 20)
                                 .foregroundColor( selectedSeason == seasonNumber ? .white : .gray)
                                 .font(.system(size: selectedSeason == seasonNumber ? 20 : 15))
                             }

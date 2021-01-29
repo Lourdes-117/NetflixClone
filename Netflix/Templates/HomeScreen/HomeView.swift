@@ -40,7 +40,10 @@ struct HomeView: View {
                     }
                     
                     //Movie Category List
-                    HomeStackView(selectedMovieBinding: $movieDetailsToShow, movies: viewModel.movies, topRowType: topBarSelection)
+                    HomeStackView(selectedMovieBinding: $movieDetailsToShow,
+                                  movies: viewModel.movies,
+                                  topRowType: topBarSelection,
+                                  selectedGenre: selectedGenre)
                 }
             }
             
@@ -50,44 +53,108 @@ struct HomeView: View {
                     .transition(.opacity)
             }
             
+            //Top Row Picker
             if shouldDisplayTopRowPicker {
-                Group {
-                    Color.black
-                        .opacity(0.9)
-                        .animation(.easeIn)
-                    
-                    VStack {
-                        Spacer()
-                        
-                        ForEach(HomeTopRowTypes.allCases, id: \.self) { topRowCase in
-                            Button(action: {
-                                shouldDisplayTopRowPicker = false
-                                topBarSelection = topRowCase
-                            }, label: {
-                                Text(topRowCase.rawValue)
-                                    .foregroundColor(topRowCase == topBarSelection ? .white : .gray)
-                                    .font(.system(size: topRowCase == topBarSelection ? 20 : 15))
-                                    .padding(.vertical, 5)
-                            })
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            shouldDisplayTopRowPicker.toggle()
-                        }, label: {
-                            Image(systemName: "x.circle.fill")
-                        })
-                        .padding(.bottom, 30)
-                        .foregroundColor(.white)
-                        .font(.system(size: 40))
-                        .scaleEffect(x: 1.1)
-                    }
-                }
-                .edgesIgnoringSafeArea(.all)
-                .frame(width: UIScreen.width, height: UIScreen.height)
+                TopRowPicker(shouldDisplayTopRowPicker: $shouldDisplayTopRowPicker,
+                    topBarSelection: $topBarSelection)
+            }
+            
+            //Genre Picker
+            if shouldDisplayGenrePicker {
+                GenrePicker(shouldDisplayGenrePicker: $shouldDisplayGenrePicker,
+                            selectedGenre: $selectedGenre)
             }
         }
+    }
+}
+
+//Helper Views
+
+struct TopRowPicker: View {
+    @Binding var shouldDisplayTopRowPicker: Bool
+    @Binding var topBarSelection: HomeTopRowTypes
+        
+    var body: some View {
+        Group {
+            Color.black
+                .opacity(0.9)
+                .animation(.easeIn)
+            
+            VStack {
+                Spacer()
+                
+                ForEach(HomeTopRowTypes.allCases, id: \.self) { topRowCase in
+                    Button(action: {
+                        shouldDisplayTopRowPicker = false
+                        topBarSelection = topRowCase
+                    }, label: {
+                        Text(topRowCase.rawValue)
+                            .foregroundColor(topRowCase == topBarSelection ? .white : .gray)
+                            .font(.system(size: topRowCase == topBarSelection ? 20 : 15))
+                            .padding(.vertical, 20)
+                    })
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    shouldDisplayTopRowPicker = false
+                }, label: {
+                    Image(systemName: "x.circle.fill")
+                })
+                .padding(.bottom, 30)
+                .foregroundColor(.white)
+                .font(.system(size: 40))
+                .scaleEffect(x: 1.1)
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
+        .frame(width: UIScreen.width, height: UIScreen.height)
+    }
+}
+
+struct GenrePicker: View {
+    @Binding var shouldDisplayGenrePicker: Bool
+    @Binding var selectedGenre: GenreType
+    
+    var body: some View {
+        Group {
+            Color.black
+                .opacity(0.9)
+                .animation(.easeIn)
+            
+            VStack {
+                Spacer()
+                
+                ScrollView {
+                    ForEach(GenreType.allCases, id: \.self) { genreCase in
+                        Button(action: {
+                            shouldDisplayGenrePicker = false
+                            selectedGenre = genreCase
+                        }, label: {
+                            Text(genreCase.rawValue)
+                                .foregroundColor(genreCase == selectedGenre ? .white : .gray)
+                                .font(.system(size: genreCase == selectedGenre ? 20 : 15))
+                                .padding(.vertical, 20)
+                        })
+                    }
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    shouldDisplayGenrePicker = false
+                }, label: {
+                    Image(systemName: "x.circle.fill")
+                })
+                .padding(.bottom, 30)
+                .foregroundColor(.white)
+                .font(.system(size: 40))
+                .scaleEffect(x: 1.1)
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
+        .frame(width: UIScreen.width, height: UIScreen.height)
     }
 }
 

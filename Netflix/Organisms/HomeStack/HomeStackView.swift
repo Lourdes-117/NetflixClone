@@ -14,9 +14,10 @@ struct HomeStackView: View {
     
     private var topRow: HomeTopRowTypes
     
-    init(selectedMovieBinding: Binding<MovieModel?>, movies: [String: [MovieModel]], topRowType: HomeTopRowTypes) {
+    init(selectedMovieBinding: Binding<MovieModel?>, movies: [String: [MovieModel]], topRowType: HomeTopRowTypes, selectedGenre: GenreType) {
         _movieDetailsToShow = selectedMovieBinding
         viewModel.movies = movies
+        viewModel.selectedGenre = selectedGenre
         topRow = topRowType
     }
     var body: some View {
@@ -31,7 +32,7 @@ struct HomeStackView: View {
                 .padding(.leading, 5)
                 ScrollView(.horizontal, showsIndicators: false, content: {
                     HStack {
-                        ForEach(viewModel.getMoviesFor(category: category, rowType: topRow)) { movie in
+                        ForEach(viewModel.getMoviesFor(category: category, rowType: topRow, andGenre: viewModel.selectedGenre)) { movie in
                             StandardHomeMovie(movie: movie)
                                 .frame(width: 200, height: 300)
                                 .padding(.horizontal, 20)

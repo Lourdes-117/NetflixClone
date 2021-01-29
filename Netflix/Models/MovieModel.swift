@@ -18,7 +18,7 @@ struct MovieModel: Identifiable {
     var thumbnailImage: String?
     
     var categories: [String]?
-    
+    var genre: GenreType = .all
     var showType: ShowType {
         get {
             details?.seasons == nil ? .movie : .tvShow
