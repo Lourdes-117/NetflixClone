@@ -43,8 +43,9 @@ struct MovieDetailsView: View {
                         VStack {
                             //Image
                             StandardHomeMovie(movie: viewModel.movie)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: UIScreen.width/2.5)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: UIScreen.width/2.5, height: UIScreen.width*0.65)
+                                .clipped()
                             
                             //Info SubHeadline
                             MovieInfoSubHeadline(details: viewModel.details, isLiked: $isLiked)

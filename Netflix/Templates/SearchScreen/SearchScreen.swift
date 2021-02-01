@@ -13,6 +13,8 @@ struct SearchScreen: View {
     @State private var searchKey: String = ""
     @State private var isEditting: Bool = true
     
+    @State private var movieDetailToShow: MovieModel? = nil
+    
     var body: some View {
         ZStack{
             Color.black
@@ -25,14 +27,51 @@ struct SearchScreen: View {
                     .animation(.easeInOut(duration: 0.25))
                 ScrollView {
                     if viewModel.isShowingPopularMovies {
-                        Text("Popular Movies")
+                        PopularMoviesView(movies: viewModel.popularMovies,
+                                          movieDetailToShow: $movieDetailToShow)
                     } else {
-                        Text("Search Results")
+                        switch viewModel.viewState {
+                        case .ready:
+                            Text("Search Results Will Appear Here")
+                        case .empty:
+                            Text("Your Search Does Not Have Any Results")
+                                .padding(.top, 150)
+                        default:
+                            Text("")
+                        }
                     }
                 }
                 Spacer()
             }
             .foregroundColor(.white)
+            
+            if let movieDetail = movieDetailToShow {
+                MovieDetailsView(movie: movieDetail, selectedMovieBinding: $movieDetailToShow)
+            }
+        }
+    }
+}
+
+struct PopularMoviesView: View {
+    var movies: [MovieModel]
+    
+    @Binding var movieDetailToShow: MovieModel?
+    
+    var body: some View {
+        LazyVStack {
+            HStack {
+                Text("Popular Searches")
+                    .bold()
+                    .padding(.leading, 10)
+                    .font(.title3)
+                Spacer()
+            }
+            
+            ForEach(movies) { (movie) in
+                PopularMovieView(movie: movie,
+                                 movieDetailBinding: $movieDetailToShow)
+                    .frame(height: 75)
+            }
         }
     }
 }
