@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE03F4B925C87B3200870966 /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03F4B825C87B3200870966 /* SearchScreenViewModel.swift */; };
+		AE03F4BE25C87E0300870966 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03F4BD25C87E0300870966 /* BindingExtension.swift */; };
+		AE03F4CE25C881A000870966 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03F4CD25C881A000870966 /* Generator.swift */; };
 		AE04ED7F25B611AD003BEDF7 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04ED7E25B611AD003BEDF7 /* EpisodeView.swift */; };
 		AE04ED8425B611F3003BEDF7 /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE04ED8325B611F3003BEDF7 /* EpisodeViewModel.swift */; };
 		AE0EEFAF25C493DC0011FDB0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EEFAE25C493DC0011FDB0 /* TabBarView.swift */; };
@@ -81,6 +84,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE03F4B825C87B3200870966 /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
+		AE03F4BD25C87E0300870966 /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		AE03F4CD25C881A000870966 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		AE04ED7E25B611AD003BEDF7 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 		AE04ED8325B611F3003BEDF7 /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 		AE0EEFAE25C493DC0011FDB0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -168,6 +174,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE03F4C225C8811300870966 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE61BCBE258923D800048695 /* UIScreenExtension.swift */,
+				AE61BCC325892B8F00048695 /* GradientExtension.swift */,
+				AEDFF5F2258E8FAA004509EF /* GlobalHelpers.swift */,
+				AE52A0FE2594643700F060BF /* StringExtensions.swift */,
+				AEBBC61225C49B790063FC7E /* ColorExtension.swift */,
+				AEBBC62025C4B52D0063FC7E /* ViewExtension.swift */,
+				AE03F4BD25C87E0300870966 /* BindingExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE03F4CC25C8815100870966 /* TestValues */ = {
+			isa = PBXGroup;
+			children = (
+				AE35D228258638E400A9CDD9 /* TestValues.swift */,
+				AE03F4CD25C881A000870966 /* Generator.swift */,
+			);
+			path = TestValues;
+			sourceTree = "<group>";
+		};
 		AE04ED7D25B6118A003BEDF7 /* EpisodeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0EEFBC25C4990C0011FDB0 /* SearchScreen.swift */,
+				AE03F4B825C87B3200870966 /* SearchScreenViewModel.swift */,
 			);
 			path = SearchScreen;
 			sourceTree = "<group>";
@@ -304,13 +334,8 @@
 		AE61BCBD258923A700048695 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				AE35D228258638E400A9CDD9 /* TestValues.swift */,
-				AE61BCBE258923D800048695 /* UIScreenExtension.swift */,
-				AE61BCC325892B8F00048695 /* GradientExtension.swift */,
-				AEDFF5F2258E8FAA004509EF /* GlobalHelpers.swift */,
-				AE52A0FE2594643700F060BF /* StringExtensions.swift */,
-				AEBBC61225C49B790063FC7E /* ColorExtension.swift */,
-				AEBBC62025C4B52D0063FC7E /* ViewExtension.swift */,
+				AE03F4CC25C8815100870966 /* TestValues */,
+				AE03F4C225C8811300870966 /* Extensions */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -627,6 +652,7 @@
 				AE35D214258637E400A9CDD9 /* MovieModel.swift in Sources */,
 				AEE62A54258DF41A00B2823E /* MovieInfoSubHeadline.swift in Sources */,
 				AEDFF5F3258E8FAA004509EF /* GlobalHelpers.swift in Sources */,
+				AE03F4BE25C87E0300870966 /* BindingExtension.swift in Sources */,
 				AE61BCDF2589398300048695 /* HomeScreenTopBarView.swift in Sources */,
 				AEE62A59258DF46100B2823E /* MovieInfoSubHeadlineViewModel.swift in Sources */,
 				AE35D22F25867AB100A9CDD9 /* HomeViewModel.swift in Sources */,
@@ -648,10 +674,12 @@
 				AE52A0EF2594593600F060BF /* CustomTabSwitcherView.swift in Sources */,
 				AE0EEFB725C4950C0011FDB0 /* TabBarViewModel.swift in Sources */,
 				AEC15ED925B43DCC00A2DDE2 /* TrailerModel.swift in Sources */,
+				AE03F4CE25C881A000870966 /* Generator.swift in Sources */,
 				AE61BCBF258923D800048695 /* UIScreenExtension.swift in Sources */,
 				AEDF0DA925880773006883DF /* HorizontalButtonViewModel.swift in Sources */,
 				AE6C062025B065BE00862C52 /* MoreLikeThisGrid.swift in Sources */,
 				AEBBC61325C49B790063FC7E /* ColorExtension.swift in Sources */,
+				AE03F4B925C87B3200870966 /* SearchScreenViewModel.swift in Sources */,
 				AEC15EE725B4426500A2DDE2 /* VideoViewModel.swift in Sources */,
 				AEC15EF325B44E6900A2DDE2 /* VideoPreviewContainerViewModel.swift in Sources */,
 				AED3D8E625BD7D3600087529 /* HomeStackView.swift in Sources */,

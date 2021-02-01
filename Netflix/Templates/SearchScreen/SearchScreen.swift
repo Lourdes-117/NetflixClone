@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct SearchScreen: View {
+    @ObservedObject private var viewModel = SearchScreenViewModel()
+    
     @State private var searchKey: String = ""
     @State private var isEditting: Bool = true
-    @State private var isLoading: Bool = false
     
     var body: some View {
         ZStack{
             Color.black
                 .ignoresSafeArea(.all)
             VStack {
-                SearchBarView(searchKey: $searchKey,
+                SearchBarView(searchKey: $searchKey.onChange(handler: viewModel.updateSearchText),
                           isEditting: $isEditting,
-                          isLoading: $isLoading)
+                          isLoading: $viewModel.isLoading)
                     .padding(.top, 10)
                     .animation(.easeInOut(duration: 0.25))
+                ScrollView {
+                    if viewModel.isShowingPopularMovies {
+                        Text("Popular Movies")
+                    } else {
+                        Text("Search Results")
+                    }
+                }
                 Spacer()
             }
+            .foregroundColor(.white)
         }
     }
 }

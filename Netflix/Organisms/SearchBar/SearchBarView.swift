@@ -63,7 +63,7 @@ struct SearchBarView: View {
             .frame(height: 36)
             .padding(.horizontal, 10)
             
-            if !searchKey.isEmpty {
+            if isEditting {
                 Button(action: {
                     //OnClick CancelButton
                     searchKey = ""
@@ -74,6 +74,7 @@ struct SearchBarView: View {
                         .foregroundColor(.greySearchText)
                 })
                 .padding(.horizontal, 10)
+                .transition(.move(edge: .trailing))
             }
         }
     }
@@ -81,6 +82,6 @@ struct SearchBarView: View {
 
 struct SearchBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBarView(searchKey: .constant(""), isEditting: .constant(false), isLoading: .constant(false))
+        SearchBarView(searchKey: .constant(""), isEditting: .constant(true), isLoading: .constant(false))
     }
 }
