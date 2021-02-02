@@ -32,7 +32,15 @@ struct SearchScreen: View {
                     } else {
                         switch viewModel.viewState {
                         case .ready:
-                            Text("Search Results Will Appear Here")
+                            HStack {
+                                Text("Movies & TV")
+                                    .bold()
+                                    .padding(.leading, 10)
+                                    .font(.title3)
+                                Spacer()
+                            }
+                            SearchResultsView(movies: viewModel.searchResults,
+                                              movieToShow: $movieDetailToShow)
                         case .empty:
                             Text("Your Search Does Not Have Any Results")
                                 .padding(.top, 150)
@@ -46,7 +54,8 @@ struct SearchScreen: View {
             .foregroundColor(.white)
             
             if let movieDetail = movieDetailToShow {
-                MovieDetailsView(movie: movieDetail, selectedMovieBinding: $movieDetailToShow)
+                MovieDetailsView(movie: movieDetail,
+                                 selectedMovieBinding: $movieDetailToShow)
             }
         }
     }
